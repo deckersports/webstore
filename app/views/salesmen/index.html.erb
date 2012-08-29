@@ -1,0 +1,24 @@
+<% title "Salesmen" %>
+
+<table>
+  <tr>
+    <th>Abbr</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th>Active</th>
+  </tr>
+  <% for salesman in @salesmen %>
+    <tr>
+      <td><%= salesman.abbr %></td>
+      <td><%= salesman.first_name %></td>
+      <td><%= salesman.last_name %></td>
+      <td><%= salesman.email %></td>
+      <td><%= salesman.phone %></td>
+      <td><%= salesman.active %></td>
+      <td><%= link_to "Show", salesman %></td>
+    </tr>
+  <% end %>
+</table>
+
