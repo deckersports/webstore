@@ -1,0 +1,11 @@
+one:
+  label: MyString
+  abbr: MyString
+  white_text: false
+  hex: MyString
+
+two:
+  label: MyString
+  abbr: MyString
+  white_text: false
+  hex: MyString

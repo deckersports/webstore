@@ -1,0 +1,20 @@
+<% title "Colors" %>
+
+<table>
+  <tr>
+    <th>Label</th>
+    <th>Abbr</th>
+    <th>White Text</th>
+    <th>Hex</th>
+  </tr>
+  <% for color in @colors %>
+    <tr>
+      <td><%= color.label %></td>
+      <td><%= color.abbr %></td>
+      <td><%= color.white_text %></td>
+      <td><%= color.hex %></td>
+      <td><%= link_to "Show", color %></td>
+    </tr>
+  <% end %>
+</table>
+

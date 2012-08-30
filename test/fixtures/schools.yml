@@ -1,0 +1,21 @@
+one:
+  name: MyString
+  mascot: MyString
+  pri_color: 1
+  sec_color: 1
+  salesman: 1
+  address: MyString
+  city: MyString
+  zip: MyString
+  abbr: MyString
+
+two:
+  name: MyString
+  mascot: MyString
+  pri_color: 1
+  sec_color: 1
+  salesman: 1
+  address: MyString
+  city: MyString
+  zip: MyString
+  abbr: MyString

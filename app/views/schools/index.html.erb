@@ -1,0 +1,30 @@
+<% title "Schools" %>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Mascot</th>
+    <th>Pri Color</th>
+    <th>Sec Color</th>
+    <th>Salesman</th>
+    <th>Address</th>
+    <th>City</th>
+    <th>Zip</th>
+    <th>Abbr</th>
+  </tr>
+  <% for school in @schools %>
+    <tr>
+      <td><%= school.name %></td>
+      <td><%= school.mascot %></td>
+      <td><%= school.pri_color %></td>
+      <td><%= school.sec_color %></td>
+      <td><%= school.salesman %></td>
+      <td><%= school.address %></td>
+      <td><%= school.city %></td>
+      <td><%= school.zip %></td>
+      <td><%= school.abbr %></td>
+      <td><%= link_to "Show", school %></td>
+    </tr>
+  <% end %>
+</table>
+

@@ -1,0 +1,17 @@
+one:
+  salesman: 1
+  webstore: 1
+  year: 1
+  date: 2012-08-29
+  school: 1
+  sport: 1
+  total: 9.99
+
+two:
+  salesman: 1
+  webstore: 1
+  year: 1
+  date: 2012-08-29
+  school: 1
+  sport: 1
+  total: 9.99
