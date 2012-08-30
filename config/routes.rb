@@ -1,4 +1,10 @@
 Webstore::Application.routes.draw do
+  resources :colors
+
+  resources :schools
+
+  resources :totals
+
   resources :salesmen
 
   # The priority is based upon order of creation:
