@@ -1,26 +1,30 @@
 <% title "Totals" %>
 
-<table>
-  <tr>
-    <th>Salesman</th>
-    <th>Webstore</th>
-    <th>Year</th>
-    <th>Date</th>
-    <th>School</th>
-    <th>Sport</th>
-    <th>Total</th>
-  </tr>
-  <% for total in @totals %>
+<table class="table table-striped">
+  <thead>
     <tr>
-      <td><%= total.salesman %></td>
-      <td><%= total.webstore %></td>
-      <td><%= total.year %></td>
-      <td><%= total.date %></td>
-      <td><%= total.school %></td>
-      <td><%= total.sport %></td>
-      <td><%= total.total %></td>
-      <td><%= link_to "Show", total %></td>
+      <th>Salesman</th>
+      <th>Webstore</th>
+      <th>Year</th>
+      <th>Date</th>
+      <th>School</th>
+      <th>Sport</th>
+      <th>Total</th>
     </tr>
-  <% end %>
+  </thead>
+  <tbody>
+    <% for total in @totals %>
+      <tr>
+        <td><%= total.salesman %></td>
+        <td><%= total.webstore %></td>
+        <td><%= total.year %></td>
+        <td><%= total.date %></td>
+        <td><%= total.school %></td>
+        <td><%= total.sport %></td>
+        <td><%= total.total %></td>
+        <td><%= link_to "Show", total %></td>
+      </tr>
+    <% end %>
+  </tbody>
 </table>
 

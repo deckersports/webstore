@@ -1,6 +1,6 @@
 class SalesmenController < ApplicationController
   def index
-    @salesmen = Salesman.all
+    @salesmen = Salesman.find_all_by_active(true)
   end
 
   def show
