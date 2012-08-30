@@ -7,7 +7,7 @@ class CreateTotals < ActiveRecord::Migration
       t.date :date
       t.integer :school
       t.integer :sport
-      t.decimal :total
+      t.decimal :total, scale: 2
       t.timestamps
     end
   end

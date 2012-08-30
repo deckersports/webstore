@@ -1,4 +1,6 @@
 Webstore::Application.routes.draw do
+  resources :pages
+
   ActiveAdmin.routes(self)
 
   devise_for :admin_users, ActiveAdmin::Devise.config
@@ -21,7 +23,11 @@ Webstore::Application.routes.draw do
   # Sample of named route:
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
   # This route can be invoked with purchase_url(:id => product.id)
+  root :to => "pages#show", :id => '1'
 
+  # match '/(:permalink)' => 'pages#show', :permalink => 'home'
+
+  # match "/:permalink", :to => "pages#show", :as => :permalink
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
 
