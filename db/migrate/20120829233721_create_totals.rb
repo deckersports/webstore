@@ -3,7 +3,7 @@ class CreateTotals < ActiveRecord::Migration
     create_table :totals do |t|
       t.integer :salesman
       t.integer :webstore
-      t.integer :year
+      t.integer :year_id
       t.date :date
       t.integer :school
       t.integer :sport
