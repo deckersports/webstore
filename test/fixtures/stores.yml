@@ -1,0 +1,27 @@
+one:
+  ship_cost_school: 9.99
+  ship_cost_home: 9.99
+  contact_name: MyString
+  contact_email: MyString
+  school_credit: false
+  seller_credit: false
+  notes: MyText
+  sport_id: 1
+  season_id: 1
+  school_id: 1
+  salesman_id: 1
+  status_id: 1
+
+two:
+  ship_cost_school: 9.99
+  ship_cost_home: 9.99
+  contact_name: MyString
+  contact_email: MyString
+  school_credit: false
+  seller_credit: false
+  notes: MyText
+  sport_id: 1
+  season_id: 1
+  school_id: 1
+  salesman_id: 1
+  status_id: 1

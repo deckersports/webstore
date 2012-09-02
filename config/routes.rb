@@ -1,4 +1,6 @@
 Webstore::Application.routes.draw do
+  resources :stores
+
   resources :pages
 
   ActiveAdmin.routes(self)

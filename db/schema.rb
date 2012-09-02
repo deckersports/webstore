@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120831022253) do
+ActiveRecord::Schema.define(:version => 20120902085603) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -101,16 +101,34 @@ ActiveRecord::Schema.define(:version => 20120831022253) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "stores", :force => true do |t|
+    t.decimal  "ship_cost_school"
+    t.decimal  "ship_cost_home"
+    t.string   "contact_name"
+    t.string   "contact_email"
+    t.boolean  "school_credit"
+    t.boolean  "seller_credit"
+    t.text     "notes"
+    t.integer  "sport_id"
+    t.integer  "season_id"
+    t.integer  "school_id"
+    t.integer  "salesman_id"
+    t.integer  "status_id"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+  end
+
   create_table "totals", :force => true do |t|
-    t.integer  "salesman"
-    t.integer  "webstore"
-    t.integer  "year"
+    t.integer  "salesman_id"
+    t.integer  "webstore_id"
+    t.integer  "year_id"
     t.date     "date"
-    t.integer  "school"
-    t.integer  "sport"
+    t.integer  "school_id"
+    t.integer  "sport_id"
+    t.integer  "season_id"
     t.decimal  "total"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "years", :force => true do |t|

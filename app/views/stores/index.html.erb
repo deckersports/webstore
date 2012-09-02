@@ -1,0 +1,36 @@
+<% title "Stores" %>
+
+<table>
+  <tr>
+    <th>Ship Cost School</th>
+    <th>Ship Cost Home</th>
+    <th>Contact Name</th>
+    <th>Contact Email</th>
+    <th>School Credit</th>
+    <th>Seller Credit</th>
+    <th>Notes</th>
+    <th>Sport</th>
+    <th>Season</th>
+    <th>School</th>
+    <th>Salesman</th>
+    <th>Status</th>
+  </tr>
+  <% for store in @stores %>
+    <tr>
+      <td><%= store.ship_cost_school %></td>
+      <td><%= store.ship_cost_home %></td>
+      <td><%= store.contact_name %></td>
+      <td><%= store.contact_email %></td>
+      <td><%= store.school_credit %></td>
+      <td><%= store.seller_credit %></td>
+      <td><%= store.notes %></td>
+      <td><%= store.sport_id %></td>
+      <td><%= store.season_id %></td>
+      <td><%= store.school_id %></td>
+      <td><%= store.salesman_id %></td>
+      <td><%= store.status_id %></td>
+      <td><%= link_to "Show", store %></td>
+    </tr>
+  <% end %>
+</table>
+

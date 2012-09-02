@@ -1,12 +1,13 @@
 class CreateTotals < ActiveRecord::Migration
   def self.up
     create_table :totals do |t|
-      t.integer :salesman
-      t.integer :webstore
+      t.integer :salesman_id
+      t.integer :webstore_id
       t.integer :year_id
       t.date :date
-      t.integer :school
-      t.integer :sport
+      t.integer :school_id
+      t.integer :sport_id
+      t.integer :season_id
       t.decimal :total, scale: 2
       t.timestamps
     end
