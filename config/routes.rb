@@ -1,4 +1,5 @@
 Webstore::Application.routes.draw do
+
   resources :stores
 
   resources :pages

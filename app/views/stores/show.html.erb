@@ -9,8 +9,12 @@
   <%= @store.ship_cost_home %>
 </p>
 <p>
-  <strong>Contact Name:</strong>
-  <%= @store.contact_name %>
+  <strong>Contact First Name:</strong>
+  <%= @store.contact_first_name %>
+</p>
+<p>
+  <strong>Contact Last Name:</strong>
+  <%= @store.contact_last_name %>
 </p>
 <p>
   <strong>Contact Email:</strong>
@@ -45,10 +49,40 @@
   <%= @store.salesman_id %>
 </p>
 <p>
-  <strong>Status:</strong>
-  <%= @store.status_id %>
+  <strong>Shipping:</strong>
+  <%= @store.shipping_id %>
+</p>
+<p>
+  <strong>Instance:</strong>
+  <%= @store.instance %>
+</p>
+<p>
+  <strong>Request Open:</strong>
+  <%= @store.request_open %>
+</p>
+<p>
+  <strong>Request Close:</strong>
+  <%= @store.request_close %>
+</p>
+<p>
+  <strong>Opened:</strong>
+  <%= @store.opened %>
+</p>
+<p>
+  <strong>Closed:</strong>
+  <%= @store.closed %>
+</p>
+<p>
+  <strong>Flier:</strong>
+  <%= @store.flier %>
+</p>
+<p>
+  <strong>Sales Order:</strong>
+  <%= @store.sales_order %>
 </p>
 
 <p>
+  <%= link_to "Edit", edit_store_path(@store) %> |
+  <%= link_to "Destroy", @store, :confirm => 'Are you sure?', :method => :delete %> |
   <%= link_to "View All", stores_path %>
 </p>

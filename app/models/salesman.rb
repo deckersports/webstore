@@ -1,6 +1,6 @@
 class Salesman < ActiveRecord::Base
   attr_accessible :abbr, :first_name, :last_name, :email, :phone, :active
-  	
+ 	has_many :store_infos 	
 	has_many :totals
 
   def full_name

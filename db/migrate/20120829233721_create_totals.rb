@@ -2,7 +2,7 @@ class CreateTotals < ActiveRecord::Migration
   def self.up
     create_table :totals do |t|
       t.integer :salesman_id
-      t.integer :webstore_id
+      t.integer :store_id
       t.integer :year_id
       t.date :date
       t.integer :school_id

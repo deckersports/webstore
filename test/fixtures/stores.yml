@@ -1,7 +1,8 @@
 one:
   ship_cost_school: 9.99
   ship_cost_home: 9.99
-  contact_name: MyString
+  contact_first_name: MyString
+  contact_last_name: MyString
   contact_email: MyString
   school_credit: false
   seller_credit: false
@@ -10,12 +11,20 @@ one:
   season_id: 1
   school_id: 1
   salesman_id: 1
-  status_id: 1
+  shipping_id: 1
+  instance: 1
+  request_open: 2012-09-02
+  request_close: 2012-09-02
+  opened: 2012-09-02
+  closed: 2012-09-02
+  flier: 2012-09-02
+  sales_order: MyString
 
 two:
   ship_cost_school: 9.99
   ship_cost_home: 9.99
-  contact_name: MyString
+  contact_first_name: MyString
+  contact_last_name: MyString
   contact_email: MyString
   school_credit: false
   seller_credit: false
@@ -24,4 +33,11 @@ two:
   season_id: 1
   school_id: 1
   salesman_id: 1
-  status_id: 1
+  shipping_id: 1
+  instance: 1
+  request_open: 2012-09-02
+  request_close: 2012-09-02
+  opened: 2012-09-02
+  closed: 2012-09-02
+  flier: 2012-09-02
+  sales_order: MyString

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120902085603) do
+ActiveRecord::Schema.define(:version => 20120903044908) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -94,6 +94,14 @@ ActiveRecord::Schema.define(:version => 20120902085603) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "shippings", :force => true do |t|
+    t.string   "label"
+    t.boolean  "to_home"
+    t.boolean  "to_school"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "sports", :force => true do |t|
     t.string   "label"
     t.string   "abbr"
@@ -101,10 +109,17 @@ ActiveRecord::Schema.define(:version => 20120902085603) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "statuses", :force => true do |t|
+    t.string   "label"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "stores", :force => true do |t|
     t.decimal  "ship_cost_school"
     t.decimal  "ship_cost_home"
-    t.string   "contact_name"
+    t.string   "contact_first_name"
+    t.string   "contact_last_name"
     t.string   "contact_email"
     t.boolean  "school_credit"
     t.boolean  "seller_credit"
@@ -113,14 +128,22 @@ ActiveRecord::Schema.define(:version => 20120902085603) do
     t.integer  "season_id"
     t.integer  "school_id"
     t.integer  "salesman_id"
+    t.integer  "shipping_id"
     t.integer  "status_id"
-    t.datetime "created_at",       :null => false
-    t.datetime "updated_at",       :null => false
+    t.integer  "instance"
+    t.date     "request_open"
+    t.date     "request_close"
+    t.date     "opened"
+    t.date     "closed"
+    t.date     "flier"
+    t.string   "sales_order"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
   end
 
   create_table "totals", :force => true do |t|
     t.integer  "salesman_id"
-    t.integer  "webstore_id"
+    t.integer  "store_id"
     t.integer  "year_id"
     t.date     "date"
     t.integer  "school_id"

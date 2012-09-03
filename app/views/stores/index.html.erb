@@ -4,7 +4,8 @@
   <tr>
     <th>Ship Cost School</th>
     <th>Ship Cost Home</th>
-    <th>Contact Name</th>
+    <th>Contact First Name</th>
+    <th>Contact Last Name</th>
     <th>Contact Email</th>
     <th>School Credit</th>
     <th>Seller Credit</th>
@@ -13,13 +14,21 @@
     <th>Season</th>
     <th>School</th>
     <th>Salesman</th>
-    <th>Status</th>
+    <th>Shipping</th>
+    <th>Instance</th>
+    <th>Request Open</th>
+    <th>Request Close</th>
+    <th>Opened</th>
+    <th>Closed</th>
+    <th>Flier</th>
+    <th>Sales Order</th>
   </tr>
   <% for store in @stores %>
     <tr>
       <td><%= store.ship_cost_school %></td>
       <td><%= store.ship_cost_home %></td>
-      <td><%= store.contact_name %></td>
+      <td><%= store.contact_first_name %></td>
+      <td><%= store.contact_last_name %></td>
       <td><%= store.contact_email %></td>
       <td><%= store.school_credit %></td>
       <td><%= store.seller_credit %></td>
@@ -28,9 +37,19 @@
       <td><%= store.season_id %></td>
       <td><%= store.school_id %></td>
       <td><%= store.salesman_id %></td>
-      <td><%= store.status_id %></td>
+      <td><%= store.shipping_id %></td>
+      <td><%= store.instance %></td>
+      <td><%= store.request_open %></td>
+      <td><%= store.request_close %></td>
+      <td><%= store.opened %></td>
+      <td><%= store.closed %></td>
+      <td><%= store.flier %></td>
+      <td><%= store.sales_order %></td>
       <td><%= link_to "Show", store %></td>
+      <td><%= link_to "Edit", edit_store_path(store) %></td>
+      <td><%= link_to "Destroy", store, :confirm => 'Are you sure?', :method => :delete %></td>
     </tr>
   <% end %>
 </table>
 
+<p><%= link_to "New Store", new_store_path %></p>

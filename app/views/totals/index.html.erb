@@ -15,9 +15,9 @@
   <tbody>
     <% for total in @totals %>
       <tr>
-        <td><%= total.salesman %></td>
-        <td><%= total.webstore %></td>
-        <td><%= total.year %></td>
+        <td><%= total.salesman.full_name %></td>
+        <td><%= total.store.to_label %></td>
+        <td><%= total.year.label %></td>
         <td><%= total.date %></td>
         <td><%= total.school %></td>
         <td><%= total.sport %></td>
