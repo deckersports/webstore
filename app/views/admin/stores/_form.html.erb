@@ -1,0 +1,36 @@
+<%= semantic_form_for [:admin, @store], :builder => ActiveAdmin::FormBuilder do |f|
+  f.inputs "School/Club Information" do
+    f.input :salesman
+    f.input :school
+    f.input :sport
+    f.input :season
+    f.input :school_credit
+    f.input :seller_credit
+    f.input :contact_first_name
+    f.input :contact_last_name
+    f.input :contact_email
+  end
+  f.inputs "Shipping Information" do 
+    f.input :ship_cost_school
+    f.input :ship_cost_home
+    f.input :shipping
+  end
+  f.inputs "Webstore Information" do
+    f.input :request_open, :as => :datepicker
+    f.input :request_close, :as => :datepicker
+    f.input :notes
+  end
+end %>
+document.getElementById('blahness').onchange = function() {
+    console.log("changed");
+    if(this.selectedIndex != this.options.length - 1) {
+        return;
+    }
+    var new_name = prompt('Please enter a name');
+    if(!new_name.length) {
+        return;
+    }
+    var textbox = document.createElement('input');
+    textbox.value = new_name;
+    this.parentNode.appendChild(textbox); //parentNode is presumably the form
+};

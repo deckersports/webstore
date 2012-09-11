@@ -25,6 +25,15 @@ end
 
 gem 'jquery-rails'
 
+# Platform specific gems
+# platforms :ruby do
+#  gem 'json'
+# end
+
+# platforms :mswin, :mingw do
+#   gem 'json_pure'
+# end 
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
@@ -41,5 +50,7 @@ gem 'jquery-rails'
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
 gem "nifty-generators"
+
+gem 'therubyracer'
 
 gem "mocha", :group => :test

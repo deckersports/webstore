@@ -1,0 +1,10 @@
+  <%= semantic_form_for [:admin, @total], :builder => ActiveAdmin::FormBuilder do |f|
+	f.inputs do
+        f.input :salesman
+        f.input :school
+        f.input :sport
+        f.input :year
+        f.input :date, :as => :string 
+        f.input :total
+     end 
+  end %>
