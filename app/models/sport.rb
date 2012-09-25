@@ -1,7 +1,7 @@
 class Sport < ActiveRecord::Base
 
 	has_many :store_infos
-	def to_label
+	def name
 	  "#{label}"
 	end
 end

@@ -12,7 +12,14 @@ Webstore::Application.routes.draw do
 
   resources :schools
 
-  resources :totals
+  resources :totals do
+    collection do
+      get 'fullindex'
+      get 'groupindex'
+      get 'salesmenindex'
+      get 'yearindex'
+    end
+  end
 
   resources :salesmen
 
