@@ -8,34 +8,34 @@ class TotalsController < ApplicationController
   end
   
   def new
-    @totals = Total.new
+    @total = Total.new
   end
 
   def create
-    @totals = Total.new(params[:totals])
-    if @totals.save
-      redirect_to @totals, :notice => "Successfully created Total."
+    @total = Total.new(params[:total])
+    if @total.save
+      redirect_to @total, :notice => "Successfully created Total."
     else
       render :action => 'new'
     end
   end
 
   def edit
-    @totals = Total.find(params[:id])
+    @total = Total.find(params[:id])
   end
 
   def update
-    @totals = Total.find(params[:id])
-    if @totals.update_attributes(params[:totals])
-      redirect_to @totals, :notice  => "Successfully updated Total."
+    @total = Total.find(params[:id])
+    if @total.update_attributes(params[:total])
+      redirect_to @total, :notice  => "Successfully updated Total."
     else
       render :action => 'edit'
     end
   end
 
   def destroy
-    @totals = Total.find(params[:id])
-    @totals.destroy
+    @total = Total.find(params[:id])
+    @total.destroy
     redirect_to Totals_url, :notice => "Successfully destroyed Total."
   end
 
@@ -45,8 +45,7 @@ class TotalsController < ApplicationController
 
   def groupindex    
     @totals = Total.all
-    @totals_years = @totals.group_by { |y| y.year_id }
-    @totals_salesmen = @totals_years.group_by { |s| s.salesman_id }
+    @total_years = @totals.group_by { |y| y.year_id }
   end
 
   def salesmenindex    

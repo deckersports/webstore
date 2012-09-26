@@ -13,8 +13,8 @@ class Store < ActiveRecord::Base
     self.status_id  ||= '1'
   end
 
-  def label
-    "#{school.name} #{sport.label}"
+  def name
+    "#{school.name} #{sport.label} #{request_open.strftime("%y")}"
   end
 
   def abbr

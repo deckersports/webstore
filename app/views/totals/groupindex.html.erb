@@ -1,29 +1,33 @@
 <% title "Totals" %>
 
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th>Salesman</th>
-      <th>Webstore</th>
-      <th>Year</th>
-      <th>Date</th>
-      <th>School</th>
-      <th>Sport</th>
-      <th>Total</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% for total in @totals %>
-      <tr>
-        <td><%= total.salesman.full_name %></td>
-        <td><%= total.store.to_label %></td>
-        <td><%= total.year.label %></td>
-        <td><%= total.date %></td>
-        <td><%= total.school %></td>
-        <td><%= total.sport %></td>
-        <td><%= total.total %></td>
-        <td><%= link_to "Show", total %></td>
-      </tr>
-    <% end %>
+<% @total_years.each do |year, totals| %>
+<h2><%= year %></h2>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Salesman</th>
+          <th>Webstore</th>
+          <th>Year</th>
+          <th>Date</th>
+          <th>School</th>
+          <th>Sport</th>
+          <th>Total</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+      <% totals.each do |total| %>
+        <tr>
+          <td><%= total.salesman.full_name %></td>
+          <td><%= total.store.to_label %></td>
+          <td><%= total.year.label %></td>
+          <td><%= total.date %></td>
+          <td><%= total.school.name %></td>
+          <td><%= total.sport.name %></td>
+          <td><%= total.gross %></td>
+          <td><%= link_to "Show", total %></td>
+        </tr>
+      <% end %>  
+    </table>    
   </tbody>
-</table>
+<% end %>

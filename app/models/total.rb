@@ -1,5 +1,5 @@
 class Total < ActiveRecord::Base
-  attr_accessible :salesman_id, :store_id, :year_id, :date, :school_id, :sport_id, :total
+  attr_accessible :salesman_id, :store_id, :year_id, :date, :school_id, :sport_id, :season_id, :gross
 
   #accepts_nested_attributes_for :salesman
 
@@ -8,5 +8,6 @@ class Total < ActiveRecord::Base
   belongs_to :year
   belongs_to :school
   belongs_to :sport
+  belongs_to :season
   
 end

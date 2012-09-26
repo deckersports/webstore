@@ -149,7 +149,7 @@ ActiveRecord::Schema.define(:version => 20120903044908) do
     t.integer  "school_id"
     t.integer  "sport_id"
     t.integer  "season_id"
-    t.decimal  "total"
+    t.decimal  "gross"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end

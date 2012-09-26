@@ -8,7 +8,7 @@ class CreateTotals < ActiveRecord::Migration
       t.integer :school_id
       t.integer :sport_id
       t.integer :season_id
-      t.decimal :total, scale: 2
+      t.decimal :gross, scale: 2
       t.timestamps
     end
   end

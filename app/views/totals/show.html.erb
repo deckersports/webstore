@@ -6,11 +6,11 @@
 </p>
 <p>
   <strong>Webstore:</strong>
-  <%= @total.store.try(:label) %>
+  <%= @total.store.try(:name) %>
 </p>
 <p>
   <strong>Year:</strong>
-  <%= @total.year.label %>
+  <%= @total.year.try(:name) %>
 </p>
 <p>
   <strong>Date:</strong>
@@ -18,15 +18,15 @@
 </p>
 <p>
   <strong>School:</strong>
-  <%= @total.school %>
+  <%= @total.school.try(:name) %>
 </p>
 <p>
   <strong>Sport:</strong>
-  <%= @total.sport.label %>
+  <%= @total.sport.try(:label) %>
 </p>
 <p>
   <strong>Total:</strong>
-  <%= @total.total %>
+  <%= @total.gross %>
 </p>
 
 <p>

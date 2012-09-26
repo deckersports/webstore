@@ -1,7 +1,13 @@
-<%= semantic_form_for @totals do |f| %>
-  <%= f.error_messages %>
-  <p>
-    <%= f.inputs  %>
-  </p>
-  <p><%= f.submit %></p>
+<%= semantic_form_for @total, :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.inputs do %>  
+    <%= f.input :salesman %>
+    <%= f.input :store %>
+    <%= f.input :year %>
+    <%= f.input :date %>
+    <%= f.input :school %>   
+    <%= f.input :sport %>    
+    <%= f.input :season %>
+    <%= f.input :gross %>
+  <% end %>
+  <%= f.actions %>
 <% end %>

@@ -15,14 +15,13 @@
   <tbody>
     <% for total in @totals %>
       <tr>
-        <td><%= total.salesman.full_name %></td>
-        <td><%= total.store.to_label %></td>
-        <td><%= total.year.label %></td>
+        <td><%= total.salesman.try(:full_name) %></td>
+        <td><%= link_to total.store.try(:name), total %></td>
+        <td><%= total.year.try(:label) %></td>
         <td><%= total.date %></td>
-        <td><%= total.school %></td>
-        <td><%= total.sport %></td>
-        <td><%= total.total %></td>
-        <td><%= link_to "Show", total %></td>
+        <td><%= total.school.try(:name) %></td>
+        <td><%= total.sport.try(:name) %></td>
+        <td><%= total.gross %></td>
       </tr>
     <% end %>
   </tbody>
